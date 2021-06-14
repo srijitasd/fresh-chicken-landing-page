@@ -103,6 +103,72 @@ li span {
   padding: 0 0.5rem;
 }
 
+.preloader-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: #ffff;
+  z-index: 1;
+  justify-items: center;
+  align-items: center;
+}
+.preloader-container img {
+  height: 15rem;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-dots {
+  text-align: center;
+  z-index: 5;
+  align-self: flex-start;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dot {
+  display: inline;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  position: relative;
+  top: -3rem;
+  color: rgb(236, 154, 0);
+  font-size: 5.5em;
+  opacity: 0;
+  animation: showHideDot 2.5s ease-in-out infinite;
+}
+.one {
+  animation-delay: 0.15s;
+}
+.two {
+  animation-delay: 0.3s;
+}
+.three {
+  animation-delay: 0.45s;
+}
+
+.four {
+  animation-delay: 0.6s;
+}
+
+@keyframes showHideDot {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @media screen and (min-width: 1030px) {
   .hero-content-container {
     margin: 4rem 0rem 0rem 0rem;
@@ -209,6 +275,10 @@ li span {
   #countdown {
     justify-self: center;
   }
+
+  .preloader-container img {
+    height: 10rem;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -261,6 +331,14 @@ li span {
   li span {
     font-size: 18px;
     padding: 0.25rem;
+  }
+
+  .preloader-container img {
+    height: 7rem;
+  }
+
+  .dot {
+    font-size: 3rem;
   }
 }
 
