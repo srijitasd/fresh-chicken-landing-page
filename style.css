@@ -19,13 +19,13 @@
   display: grid;
   margin-top: 3rem;
   width: 50vw;
-  justify-items: center;
+  margin-left: 3rem;
 }
 
 .title-container {
   display: flex;
   gap: 1rem;
-
+  text-align: left;
   margin-bottom: 2rem;
 }
 
@@ -171,11 +171,19 @@ li span {
 
 @media screen and (min-width: 1030px) {
   .hero-content-container {
-    margin: 4rem 0rem 0rem 0rem;
+    margin-left: 6rem;
   }
 
   .title-container {
     margin-bottom: 2rem;
+  }
+
+  .title-container h1 {
+    font-size: 60px;
+  }
+
+  .sub-title {
+    padding: 2rem 6rem;
   }
 
   ul {
@@ -227,7 +235,7 @@ li span {
     display: grid;
     width: 100vw;
     margin: 0rem;
-    margin-top: 3rem;
+    margin-top: 6rem;
   }
 
   .title-container {
@@ -312,7 +320,7 @@ li span {
 
   .sub-title {
     padding: 1rem 2rem;
-    margin: 0;
+    margin: 2rem;
   }
 
   .sub-title h2 {
